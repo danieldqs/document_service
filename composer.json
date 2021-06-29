@@ -1,0 +1,38 @@
+{
+  "name": "clink/document_service",
+  "description": "Document Service: Application for managing files",
+  "homepage": "https://c-link.com",
+  "require": {
+    "php": "^7.2",
+    "ext-json": "*",
+    "monolog/monolog": "^2.1",
+    "php-di/php-di": "^6.2",
+    "slim/psr7": "^1.1",
+    "slim/slim": "^4.5",
+    "illuminate/database": "^8.28"
+  },
+  "require-dev": {
+    "jangregor/phpstan-prophecy": "^0.8.0",
+    "phpstan/extension-installer": "^1.0.4",
+    "phpstan/phpstan": "^0.12.37",
+    "phpunit/phpunit": "^8.5"
+  },
+  "config": {
+    "process-timeout": 0,
+    "sort-packages": true
+  },
+  "autoload": {
+    "psr-4": {
+      "App\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Tests\\": "tests/"
+    }
+  },
+  "scripts": {
+    "start": "php -S localhost:8080 -t public",
+    "test": "phpunit"
+  }
+}
